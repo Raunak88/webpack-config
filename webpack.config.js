@@ -1,13 +1,23 @@
- var path = require('path'); 
-    module.exports = {
-    //  Entry point of webpack
-    entry: './src/app.js',         
-    output: {
-        // Need to be resolved to absolute path
-        path: path.resolve(__dirname, 'dist'),
-        // bundled/compiled file name  
-        filename: './bundle.js',
-        // For webpack dev server to identify the full path.                
-        publicPath: '/dist'        
-        }
-    };
+var path = require("path");
+module.exports = {
+  entry: "./src/app.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "./bundle.js",
+    publicPath: "/dist",
+  },
+  module: {
+    rules: [
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: { presets: ["es2015"] },
+          },
+        ],
+      },
+    ],
+  },
+};
