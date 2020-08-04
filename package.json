@@ -1,0 +1,24 @@
+{
+  "name": "webpacker",
+  "version": "1.0.0",
+  "description": "practice webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build":"webpack src/app.js --output dist/bundle.js --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raunak88/webpack-config.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raunak88/webpack-config/issues"
+  },
+  "homepage": "https://github.com/Raunak88/webpack-config#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
